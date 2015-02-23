@@ -20,8 +20,8 @@ class Task01TestCase(unittest.TestCase):
         This assumes the absolute minimum necessary number of lines to achieve
         'complete' documentation.
         """
-        numlines = len(task_01.__doc__.splitlines())
-        self.assertEqual(numlines, 11, 'Expected at least 11 lines of docs.')
+        numlines = len(task_01.know_what_i_mean.__doc__.splitlines())
+        self.assertGreaterEqual(numlines, 11, 'Expected at least 11 lines.')
 
 
 if __name__ == '__main__':
