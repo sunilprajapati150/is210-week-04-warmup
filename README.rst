@@ -8,13 +8,15 @@ Warmup Tasks
 :College: CUNY School of Professional Studies
 :Course-Name: Software Application Programming I
 :Course-Code: IS 210
-:Points: ##
+:Points: 15
 :Due-Date: YYYY-MM-DDTHH:mm:ss
 
 Overview
 ========
 
-[overview]
+In this assignment, we'll focus on the construction of basic functions. The
+functions we create will be intentionally simple to make it easier to isolate
+the task at hand.
 
 Instructions
 ============
@@ -41,24 +43,191 @@ files that you create!
 Warmup Tasks
 ============
 
-Task ##
+Task 01
 -------
 
-[description of task]
+Functions have their own documentation standards which are covered in the
+Google Python Style Guide. Document the function found here appropriately.
+
+.. warning::
+
+    Neither Lint nor Unit tests will test the quality of your documentation or
+    whether or not it's formatted correctly. You must document each function
+    correctly in order to receive credit.
+
+.. hint::
+
+    Indentation and spacing both matter so pay attention to how you indent the
+    headers and the sections.
 
 Specifications
 ^^^^^^^^^^^^^^
 
-[step-by-step directions of the task]
+1.  Document the function in ``task_01.py`` according to the Google Python
+    Style Guide.
+
+.. hint::
+
+    You can use the ``help()`` function to test your docstring as below.
 
 Examples
 ^^^^^^^^
 
-[examples of the work in-progress]
+.. code:: pycon
+
+    >>> import task_01
+    >>> help(task_01.know_what_i_mean)
+
+Task 02
+-------
+
+Calling a function is already something we've done a few times but let's
+practice it again just to make sure we've connected the dots.
+
+Specifications
+^^^^^^^^^^^^^^
+
+1.  Open ``hamlet.py`` to get a sense of what this function does.
+
+2.  Open ``task_02.py`` and call the ``hamlet.crazy_math()`` math function
+    assigning it the following parameters in order:
+
+    1.  4
+
+    2.  100000
+
+    3.  8
+
+    4.  98
+
+3.  Assign the returned result to a new global variable named ``POSITIONAL``
+
+Examples
+^^^^^^^^
 
 .. code:: pycon
 
-    >>>
+    >>> import task_02
+    >>> print task_02.POSITIONAL
+    0.00374391674995
+
+Task 03
+-------
+
+Positional parameters may suffice in many cases but most programmers prefer to
+use keyword arguments. Here you'll call a function with keyword arguments
+instead of positional parameters.
+
+Specifications
+^^^^^^^^^^^^^^
+
+1.  Open ``hamlet.py`` to get a sense of what this function does.
+
+2.  Open ``task_03.py`` and call the ``hamlet.crazy_math()`` math function
+    assigning it the following parameters by keyword reference:
+
+    1.  bananas: 48
+
+    2.  monkeys: 84
+
+    3.  hours: 200000
+
+3.  Assign the returned result to a new global variable named ``KEYWORD``
+
+Examples
+^^^^^^^^
+
+.. code:: pycon
+
+    >>> import task_03
+    >>> print task_03.KEYWORD
+    0.00879168510437
+
+Task 04
+-------
+
+In this task, you'll be defining a function with three parameters.
+
+Specifications
+^^^^^^^^^^^^^^
+
+1.  Create a new file names ``task_04.py``
+
+2.  Define a new function named ``too_many_kittens`` that takes three
+    arguments, in order:
+
+    1.  kittens, the number of kittens
+
+    2.  litterboxes, the (integer) number of available litterboxes
+
+    3.  catfood, a boolean representing whether or not any catfood exists
+
+3.  In the function return the value of the following comparison statement:
+
+    .. code:: python
+
+        not (litterboxes >= kittens and catfood)
+
+    This statement ensures we have at least one litterbox for each kitten and
+    that we have some catfood. It then uses inversion via ``not`` to answer
+    whether or not we have too many kittens.
+
+..  note::
+
+    A fun fact of the polymorphic properties of python is the fact that
+    truthiness would allow ``catfood`` to either be a boolean (eg, ``True``) or
+    some number like ``0`` or even ``None`` and this would continue to operate
+    in a reasonably sane manner.
+
+Examples
+^^^^^^^^
+
+.. code:: pycon
+
+    >>> too_many_kittens(12, 12, False)
+    True
+    
+    >>> too_many_kittens(13, 12, True)
+    True
+
+    >>> too_many_kittens(12, 13, True)
+    False
+
+Task 05
+-------
+
+Here we'll set a default value in our function definition.
+
+Specifications
+^^^^^^^^^^^^^^
+
+1.  Create a file named ``task_05.py``
+
+2.  Create a new function named ``defaults`` with two parameters:
+    
+    1.  ``my_optional`` which has a default value of True
+
+    2.  ``my_required`` which has no default value
+
+3.  Return the following logical comparison:
+
+    .. code:: python
+
+        my_optional is my_required
+
+Examples
+^^^^^^^^
+
+.. code:: pycon
+
+    >>> defaults(True)
+    True
+
+    >>> defaults(True, False)
+    False
+
+    >>> defaults(False, False)
+    True
 
 Executing Tests
 ===============
