@@ -23,6 +23,14 @@ class Task05TestCase(unittest.TestCase):
         self.assertFalse(task_05.defaults(my_required=True, my_optional=False))
         self.assertFalse(task_05.defaults(my_required=False, my_optional=True))
 
+    def test_parameter_order(self):
+        """
+        Tests that parameters are ordered correctly.
+        """
+        self.assertTrue(task_05.defaults(True, my_optional=True))
+        self.assertFalse(task_05.defaults(True, my_optional=False))
+
+
     def test_default_value(self):
         """
         Tests that the default value is set to True and is compared to p1.

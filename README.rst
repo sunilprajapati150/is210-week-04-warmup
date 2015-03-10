@@ -207,7 +207,7 @@ Specifications
     
     1.  ``my_optional`` which has a default value of True
 
-    2.  ``my_required`` which has no default value
+    2.  ``my_required`` which is a required param and has no default value
 
 3.  Return the following logical comparison:
 
