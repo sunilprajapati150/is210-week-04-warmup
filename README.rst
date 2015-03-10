@@ -59,6 +59,11 @@ Google Python Style Guide. Document the function found here appropriately.
 
     Indentation and spacing both matter so pay attention to how you indent the
     headers and the sections.
+    
+.. hint::
+
+    Remember that optional parameters should be indicated as-such in their
+    declaration!
 
 Specifications
 ^^^^^^^^^^^^^^
@@ -171,6 +176,12 @@ Specifications
     This statement ensures we have at least one litterbox for each kitten and
     that we have some catfood. It then uses inversion via ``not`` to answer
     whether or not we have too many kittens.
+
+.. note::
+
+    Note the spacing of the ``not`` operator. There should always be spacing
+    around all logical operators like ``and``, ``not`` or ``or``. Without it,
+    ``not`` would look like a function, eg ``not()``.
 
 ..  note::
 
