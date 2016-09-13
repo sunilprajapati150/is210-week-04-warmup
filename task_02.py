@@ -4,6 +4,4 @@
 
 
 import hamlet
-
-POSITIONAL = hamlet.crazy_math(4,100000,typewriters=8,bananas=98)
-    
+POSITIONAL = hamlet.crazy_math(4, 100000, typewriters=8, bananas=98)
